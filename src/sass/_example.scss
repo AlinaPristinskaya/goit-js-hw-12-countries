@@ -25,3 +25,22 @@
   background-size: cover;
   background-position: center;
 }
+.card{
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-basis: 50%;
+
+  
+
+}
+.card-img-top{
+  padding: 50px;
+}
+.card-body{
+  padding: 50px;
+}
+.form-group{
+  margin: 30px
+}
