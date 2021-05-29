@@ -15,10 +15,13 @@ search.addEventListener('input', debounce(onInput, 500));
 function onInput(e){
   e.preventDefault();
   const searchName=e.target.value;
-  console.log(searchName);
-  API.fetchCountries(searchName).then(renderCountriesCard)
-  .catch(onError)  
-  .finally(()=>searchName.reset());
+  if (e.target.value===true ||e.target.value!=='' ){
+    API.fetchCountries(searchName).then(renderCountriesCard)
+    .catch(onError)  
+
+  }
+ 
+  
 }
 
 function renderCountriesCard(countries){  
