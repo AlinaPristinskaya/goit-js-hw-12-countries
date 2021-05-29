@@ -15,7 +15,8 @@ search.addEventListener('input', debounce(onInput, 500));
 function onInput(e){
   e.preventDefault();
   const searchName=e.target.value;
-  if (e.target.value===true && e.target.value!==' ' ){
+  const searchNameValid=searchName.trim()
+  if (searchNameValid){
     API.fetchCountries(searchName).then(renderCountriesCard)
     .catch(onError)  
 
